@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>flex</title>
+    <style>
+        .big-box {
+            display: flex;
+            flex-direction: row;
+            width: 500px;
+            height: 250px;
+            align-items: center;
+            justify-content: center;
+            background-color: indianred;
+
+        }
+
+        .big-box > div {
+            width: 20px;
+            height: 20px;
+            background-color: indigo;
+            border: 1px solid black;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border: 1px solid grey;
+
+        }
+        .container-items {
+            border: 2px solid black;
+            flex-basis: 190px;
+            flex-grow: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="big-box">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="container">
+        <div class="container-items">this is a container item with some more text than the others and whatnot</div>
+        <div class="container-items">this is a container item with a little less</div>
+        <div class="container-items">this is a container item with even less</div>
+        <div class="container-items">this is a container item</div>
+    </div>
+</body>
+</html>

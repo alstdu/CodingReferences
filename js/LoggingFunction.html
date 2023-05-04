@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascrpt :)</title>
+</head>
+<body>
+    <script>
+        function logGreeting() {
+            console.log( "hello world" );
+        }
+        console.log( "scuse me" );
+        logGreeting();
+
+        const rand = Math.random();
+        console.log( rand );
+        console.log( rand );
+
+        function getRandom() {
+            return Math.random();
+        }
+        console.log( getRandom() );
+        console.log( getRandom() );
+
+        function getDouble( num ) { 
+            return num * 2;
+        }
+        console.log( getDouble( 7 ) );
+        console.log( getDouble( 0 ) );
+
+        function getRandomBetween( min, max ) {
+            const range = max - min;
+            const rand = Math.random() * range + min;
+            return Math.floor( rand );
+        }
+        console.log( getRandomBetween( 0, 10 ) ); 
+        console.log( getRandomBetween( 10, 20 ) ); 
+        console.log( getRandomBetween( 50, 100 ) ); 
+
+        const myObj = {
+            myProperty: "i am a value! :)",
+            myOtherProperty: 4
+        };
+        const myOtherObj = {
+            myProperty: "i am also a value! :)",
+            myOtherProperty: 9
+        };
+        console.log( myObj );
+        console.log( myObj.myProperty );
+        console.log( myObj.myOtherProperty );
+        console.log( myOtherObj );
+        console.log( myOtherObj.myProperty );
+        console.log( myOtherObj.myOtherProperty );
+
+
+    </script>
+</body>
+</html>

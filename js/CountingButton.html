@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascrpt :)</title>
+</head>
+<body>
+    <p id="counter">0</p>
+    <p id="counter2">0</p>
+    <button id="add-button">push :)</button>
+    
+    <script>
+      const counter = document.getElementById( "counter" );
+      const counter2 = document.getElementById( "counter2" );
+      const addButton = document.getElementById( "add-button" );
+      let currentCount = 0;
+      function onAddButtonClicked() {
+          currentCount = currentCount + 1;
+          counter.innerText = currentCount;
+          
+          counter2.innerText = Number(counter2.innerText) + 1;
+      }
+      addButton.onclick = onAddButtonClicked;
+    </script>
+</body>
+</html>

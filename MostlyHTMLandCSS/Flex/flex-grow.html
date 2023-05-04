@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #content-wrapper {
+            margin: auto;
+            padding: 100px;
+
+            border: 5px solid red;
+            box-sizing: border-box;
+
+            max-width: 1000px;
+        }
+
+        .parent {
+            margin: auto;
+
+            background-color: blue;
+            color: white;
+            width: 300px;
+            height: 100px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .child {
+            background-color: purple;
+            width: 100px;
+            height: 100px;
+            border: 10px solid red;
+            box-sizing: border-box;
+        }
+
+        #example-1 .alice {
+            flex-grow: 0;
+        }
+
+        #example-1 .bob, #example-2 .bob {
+            flex-grow: 0;
+        }
+
+        #example-2 .alice {
+            flex-grow: 1;
+        }
+
+        #example-3 .alice {
+            flex-grow: 3;
+        }
+
+        #example-3 .bob {
+            flex-grow: 1;
+        }
+        
+        </style>
+</head>
+<body>
+    <div id="content-wrapper">
+        <h1>Not-So-Pretty Explaination of Flex Grow</h1>
+
+        <p>parents start at 300px and the children are at 100px</p>
+        
+        <div class='parent' id="example-1">
+            <div class="child alice">alice</div>
+            <div class="child bob">bob</div>
+        </div>
+        
+        <p>alice and bob are both at flex-grow: 0. so alice and bob take up their usual amount of space.
+        so 100px each, and 100 left over. because no fill.
+        </p>
+        
+        <div class='parent' id="example-2">
+            <div class="child alice">alice</div>
+            <div class="child bob">bob</div>
+        </div>
+        
+        <p>So this one, alice gets all the middle left over space. bob keeps his 100px
+        and alice gets 200px.</p>
+        
+        <div class='parent' id="example-3">
+            <div class="child alice">alice</div>
+            <div class="child bob">bob</div>
+        </div>
+        
+        <p>alice has 3 and bob has 1. 1+3=4 together. alice gets 
+        3 quarters of the 100 and bob gets 1 quarter of the 100. alice = 175 and bob = 125.
+        </p>
+    </div>
+</body>
+</html>

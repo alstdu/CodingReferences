@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>:)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            border: 0.1rem solid black;
+            font-size: 4rem;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .house {
+            background-color: rgb(224, 87, 87);
+
+            display: flex;
+            justify-content: space-around;
+            align-items:flex-end;
+
+        }
+        .happy-box {
+            height: min-content;
+            background-color: yellow;
+        }
+
+        .fun-box {
+            background-color: rgb(15, 206, 240);
+        }
+        .greedy-box {
+            flex-grow: 1;
+            background-color: orange;
+        }
+        .room {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="house">
+        <div class="happy-box"> :)</div>
+        <div class="greedy-box"> >:T</div>
+    </div>
+    <div class="house">
+        <div class="happy-box"> :)</div>
+        <div class="happy-box"> :)</div>
+        <div class="room">
+            <div class="happy-box">:)</div>
+            <div class="happy-box">:)</div>
+            <div class="happy-box">:)</div>
+        </div>    
+        <div class="happy-box"> :)</div>
+        <div class="happy-box"> :)</div>
+    </div>
+    <div class="house">
+        <div class="happy-box"> :)</div>
+        <div class="fun-box">Fun!</div>
+        <div class="happy-box"> :)</div>
+    </div>
+</body>
+</html>

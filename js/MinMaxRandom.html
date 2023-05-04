@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascrpt :)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            background-color: hsl(227, 66%, 86%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #button-holder {
+            display: flex;
+        }
+        #description {
+            margin: 2em;
+            padding: 1em;
+            background-color: hsl(227, 84%, 80%);
+        }
+        .button-group {
+            margin: 0 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 3em;
+        }
+        .button-group button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: inherit;
+            background-color: hsl(29, 82%, 69%);
+            border: 0.25em solid hsl(29, 86%, 80%);
+            border-radius: 0.25em;
+            padding: 0.75em;
+            height: 1em;
+            width: 1em;
+        }
+        .button-group p {
+            font-size: 1.5em;
+            margin: 0.1em 0;
+        }
+        #generator-button button {
+            width: min-content;
+            background-color: hsl(286, 77%, 67%);
+            border-color: hsl(286, 67%, 80%);
+        }
+    </style>
+</head>
+<body>
+    <div id="button-holder">
+        <div id="min-counter" class="button-group counter-button-group">
+            <div>Min</div>
+            <button id="add-button-min">+</button> 
+            <p id="countermin">0</p>
+            <button id="minus-button-min">-</button>
+        </div>
+
+        <div id="max-counter" class="button-group counter-button-group">
+            <div>Max</div>
+            <button id="add-button-max">+</button>
+            <p id="countermax">0</p>
+            <button id="minus-button-max">-</button>
+        </div>
+
+        <div id="generator-button" class="button-group">
+            <div>Generate</div>
+            <button id="generate">random</button>
+            <p id="generated-number">0</p>
+            <button id="reset-button">reset</button>
+        </div>
+    </div>
+    
+    <div id="description">
+        <p>Use the Min counter to select a minimum number and the Max counter to select the maximum number. Hitting random will generate a random number between the two selected numbers.</p>
+    </div>
+
+    <script>
+        const counterMin = document.getElementById( "countermin" );
+        const addButtonMin = document.getElementById( "add-button-min" );
+        const minusButtonMin = document.getElementById( "minus-button-min" );
+        let currentCountMin = 0;
+        function onAddButtonMinClicked() {
+            currentCountMin = currentCountMin + 1;
+            counterMin.innerText = currentCountMin;
+        }
+        addButtonMin.onclick = onAddButtonMinClicked;
+
+        function onMinusButtonMinClicked() {
+            currentCountMin -= 1;
+            counterMin.innerText = currentCountMin;
+        }
+        minusButtonMin.onclick = onMinusButtonMinClicked;
+
+        const counterMax = document.getElementById( "countermax" );
+        const addButtonMax = document.getElementById( "add-button-max" );
+        const minusButtonMax = document.getElementById( "minus-button-max" );
+        let currentCountMax = 0;
+        function onAddButtonMaxClicked() {
+            currentCountMax += 1;
+            counterMax.innerText = currentCountMax; 
+        }
+        addButtonMax.onclick = onAddButtonMaxClicked;
+
+        function onMinusButtonMaxClicked() {
+            currentCountMax -= 1;
+            counterMax.innerText = currentCountMax;
+        }
+        minusButtonMax.onclick = onMinusButtonMaxClicked;
+
+        function getRandomBetween( min, max ) {
+            const range = max - min;
+            const rand = Math.random() * range + min;
+            return Math.floor( rand );
+        }
+
+        const generatorDisplay = document.getElementById( "generated-number" );
+        const generate = document.getElementById( "generate" );
+        function onGenerateClicked() {
+            /*const min = currentCountMin;
+            const max = currentCountMax;
+            const range = max - min;
+            const rand = Math.random() * range + min;
+            generatorDisplay.innerText = Math.floor( rand );*/
+            generatorDisplay.innerText = getRandomBetween( currentCountMin, currentCountMax );
+        }
+        generate.onclick = onGenerateClicked;
+
+        const resetButton = document.getElementById( "reset-button" );
+        function onResetButtonClicked() {
+            currentCountMin = 0;
+            currentCountMax = 0;
+            counterMin.innerText = currentCountMin;
+            counterMax.innerText = currentCountMax;
+            generatorDisplay.innerText = 0;
+      }
+      resetButton.onclick = onResetButtonClicked;
+
+      
+    </script>
+</body>
+</html>

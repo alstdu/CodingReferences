@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            border: 0.1rem solid black;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .header {
+            flex-basis: 4rem;
+        }
+
+        .container {
+            flex-grow: 1;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-row {
+            flex-grow: 1;
+        }
+
+        .bottom-row {
+            flex-grow: 1;
+        }
+
+        .trip-info {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 30rem;
+            justify-content: space-around;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .trip-info .row {
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .info {
+            margin: 0.25rem;
+            height: 1rem;
+            width: 6rem;
+            background-color: rgb(131, 131, 204);
+        }
+
+        .map {
+            flex-grow: 1;
+            background-color: rgb(94, 150, 94);
+        }
+
+        .happy-box {
+            margin: 1rem;
+            flex-grow: 1;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">box :)</div>
+    <div class="container">
+        <div class="row top-row">
+            <div class="trip-info">
+                <div class="row">
+                    <div class="info"></div>
+                    <div class="info"></div>
+                    <div class="info"></div>
+                    <div class="info"></div>
+                </div>
+                <div class="row">
+                    <div class="info"></div>
+                    <div class="info"></div>
+                    <div class="info"></div>
+                    <div class="info"></div>
+                </div>
+                <div class="row">
+                    <div class="info"></div>
+                    <div class="info"></div>
+                    <div class="info"></div>
+                    <div class="info"></div>
+                </div>
+                <div class="row">
+                    <div class="info"></div>
+                    <div class="info"></div>
+                    <div class="info"></div>
+                    <div class="info"></div>
+                </div>
+            </div>
+            <div class="map"></div>
+        </div>
+        <div class="row bottom-row">
+            <div class="happy-box"></div>
+            <div class="happy-box"></div>
+            <div class="happy-box"></div>
+        </div>
+    </div>
+</body>
+</html>

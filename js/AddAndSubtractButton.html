@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascrpt :)</title>
+</head>
+<body>
+    <p id="counter">0</p>
+    <button id="add-button">push :)</button> 
+    <button id="reset-button">reset</button>
+    <button id="minus-button">push :(</button>
+    
+    <script>
+      const counter = document.getElementById( "counter" );
+      const addButton = document.getElementById( "add-button" );
+      const minusButton = document.getElementById( "minus-button" );
+      const resetButton = document.getElementById( "reset-button" );
+      let currentCount = 0;
+      function onAddButtonClicked() {
+          currentCount = currentCount + 1;
+          counter.innerText = currentCount;
+      }
+      addButton.onclick = onAddButtonClicked;
+
+      function onMinusButtonClicked() {
+          currentCount = currentCount - 1;
+          counter.innerText = currentCount;
+      }
+      minusButton.onclick = onMinusButtonClicked;
+
+      function onResetButtonClicked() {
+          currentCount = 0
+          counter.innerText = currentCount;
+      }
+      resetButton.onclick = onResetButtonClicked;
+
+
+      
+    </script>
+</body>
+</html>

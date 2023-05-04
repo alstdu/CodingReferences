@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Padding and Margin</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 50px;
+        }
+
+        .foo {
+            background-color: rgb(140, 140, 194);
+            width: 300px;
+            height: 500px;
+
+            padding: 50px;
+
+            box-sizing: border-box;
+            border: 5px solid black;
+        }
+
+        .bar {
+            background-color: rgb(236, 193, 193);
+
+            margin: 50px;
+            padding: 30px;
+
+            box-sizing: border-box;
+            border: 5px solid black;
+        }
+
+        .boop {
+            background-color: rgb(176, 235, 164);
+
+            margin: 0;
+            padding: 30px;
+
+            box-sizing: border-box;
+            border: 5px solid black;
+        }
+
+        .column-text, .column-pictures {
+            display: inline-block;
+            vertical-align: top;
+
+        }
+
+        .column-text {
+            max-width: 50%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="column-text">
+        <h1>What is Margin</h1>
+            <p> Margin is used to create space around elements, outside of any defined borders.</p> 
+
+        <h1>Margin Values</h1>
+            <p>Margin with one number will apply the same value to all four sides of the elements</p>
+            <p>Margin with two numbers will say the first value is for the top and bottom
+        and the second value is for the left and right side.
+            <p>Margin with three numbers will apply the first value to the top, the second number to the left and right,
+        and the third value for the bottom</P>
+            <p>Margin with four numbers will apply each value going clockwise. The first for the top, the second for the
+        right, the third for the bottom, and the fourth for the left.</p>
+
+            <p>A positive number indicates it's further away from the element. A negative number will indicate it's
+                closer to the element</p>
+
+        <h1>What is Padding</h1>
+            <p>An element's padding area is the space between its content and its border. 
+            on the inside. it squishes its contents inward.</p>
+
+        <h1>Padding Values</h1>
+            <p>Padding with one number will appy the same value to all sides of the element</p>
+            <p>Padding with two numbers will say the first value is for the top and bottom
+                and the second value is for the left and right side.
+            <p>Padding with three numbers will apply the first value to the top, the second number to the left and right,
+                and the third value for the bottom</P>
+            <p>Padding with four numbers will apply each value going clockwise. The first for the top, the second for the
+                right, the third for the bottom, and the fourth for the left.</p>
+
+        <h1>The Difference Between Padding & Margin</h1>
+            <p>Margin creates space around the container or elements. Padding is used to create space inside the container.
+            Padding is like squishing tofu into a container. Margin is like two magnets repelling each other.</p>
+
+        <h1>Viewing on Dev Tools</h1>
+            <p>right click on the document, inspect, and you can hover over different elements 
+            and containers and see whether or not the elements have padding (displayed with green) 
+            or a margin (displayed with orange).</P>
+    </div>
+    <div class="column-pictures">
+        <div class="foo">
+            margin: 0;
+            padding: 50px;
+            <p class="bar">
+                Bar.<br/>
+                margin: 50px;
+            </p>
+            <p class="boop">
+                Boop.<br/>
+                margin: 0;
+            </p>
+        </div>
+    </div>
+</body>
+</html>

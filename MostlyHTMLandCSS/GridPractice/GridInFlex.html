@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>notes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .row>*, .column>* {
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #nav {
+            flex-basis: 5rem;
+            background-color: aquamarine;
+            padding: 1rem;
+        }
+
+        #sidebar {
+            flex-basis: 10rem;
+            flex-shrink: 1;
+            background-color: gainsboro;
+            padding: 1rem;
+        }
+
+        #image-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #article {
+            padding: 1rem;
+        }
+        .fake-image {
+            background-color: fuchsia;
+            height: 500px;
+            width: 500px;
+            margin: 1rem;
+        }
+
+    </style>
+</head>
+<body class="column">
+    <div id="nav">nav</div>
+    <div class="row">
+        <div id="sidebar">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repellat veniam veritatis ex soluta incidunt expedita laborum. Eligendi, at harum dolore expedita, animi reiciendis laudantium reprehenderit tenetur mollitia numquam quia.</p>
+            <p>Dolorem, qui, provident consectetur, consequatur ratione natus dignissimos aspernatur modi ipsam odio architecto ullam aliquid aliquam veritatis ea perferendis temporibus officiis totam exercitationem voluptate numquam quod recusandae beatae. Corrupti, optio.</p>
+            <p>Atque suscipit, minima nam dolorem, quos voluptatum quisquam laudantium nisi labore eveniet natus accusamus deserunt vero qui autem adipisci blanditiis eaque impedit sapiente molestiae quae officiis dolore facere est! Possimus.</p>
+        </div>
+        <div class="column">
+            <div id="image-container">
+                <div class="fake-image"></div>
+            </div>
+            <div id="article">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In veritatis quisquam, harum eveniet doloremque, illo maxime earum nesciunt, unde ex nostrum quasi. Sint laborum, at eius illum cum possimus exercitationem.</p>
+                <p>Dolorem asperiores eius itaque! Incidunt dolorum vitae eius atque, dolore consequuntur totam esse ipsa a repellendus quam magni accusamus neque amet ipsam quo sint. Deserunt est voluptatibus nostrum quis iusto!</p>
+                <p>Quaerat nobis maxime sequi vitae voluptatem quo, inventore ratione! Minus odio eveniet libero sint debitis ducimus aperiam adipisci ipsam, ipsum voluptas. Et iure, illo commodi magni numquam minima delectus dicta.</p>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

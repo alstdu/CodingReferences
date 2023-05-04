@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        div {
+            margin: 1em;
+            font-family: sans;
+            font-weight: bolder;
+        }
+
+        .class-1 {
+            border: 0.5em dotted rgb(39, 2, 21);
+        }
+        .class-2 {
+            color: rgb(255, 251, 0);
+        }
+        /* class 1 OR class 2 */
+        .class-1, .class-2 {
+            font-style: italic;
+        }
+        /* class 1 AND 2 */
+        .class-1.class-2 {
+            background-color: rgb(241, 136, 136);
+        }
+        /* class 2 INSIDE class 1 */
+        .class-1 .class-2 {
+            background-color: rgb(119, 119, 219);
+        }
+        /* class 2 DIRECTLY inside class 1 */
+        /* comes after the blue one, so it wins because it WAS blue but then we changed it to green */
+        .class-1 > .class-2 {
+            background-color: rgb(56, 233, 109);
+        }
+    </style>
+</head>
+<body>
+    <div class="class-1">just class 1</div>
+    <div class="class-2">just class 2</div>
+    <div class="class-1 class-2">class 1 AND class 2</div>
+    <div class="class-1">
+        just class 1 (with stuff inside)
+        <div class="class-2">class 2 DIRECTLY inside class 1</div>
+        <div>
+            <div class="class-2">class 2 INSIDE class 1</div>
+        </div>
+    </div>
+</body>
+</html>

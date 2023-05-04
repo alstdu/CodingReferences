@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Units In Css</title>
+    <style>
+        body {
+            margin: auto;
+            width: 500px;
+            background-color: purple;
+        }
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            padding: 5px;
+        }
+        #content-container {
+            border: purple 3px solid;
+            width: 400px;
+            padding: 5px;
+            background-color: white;
+            box-shadow: 5px 5px 15px black;
+        }
+        #side {
+            left: 200px;
+            top: 300px;
+            width: 290px;
+            text-align: right;
+            font-size: 12px;
+            background-image: linear-gradient(to right, purple ,cornflowerblue);
+            box-shadow: 5px 1px 6px black;
+            }
+        .fifty-percent {
+            width: 50%;
+        }
+        .ten-percent {
+            width: 10%;
+        }
+        .one-hundred-pixels {
+            width: 100px;
+        }
+        .one-hundredtf-pixels {
+            width: 135px;
+        }
+        .fifty-vw {
+            width: 50vw;
+        }
+        .ten-vh {
+            height: 10vh;
+        }
+        .parent {
+            width: 135px;
+            border: black 2px solid;
+            margin: 10px;
+        }
+        .box {
+            margin: 0;
+            padding: 0;
+            border: 1px solid black;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+<div id="content-container">
+    <h1>The Difference Between CSS Units</h1>
+    <p>Pixels has a fixed width, and percent is what percentage smaller than the width of the parent.
+        for example here our parent is 135px wide. you can see 100px takes up exactly 100px. and the
+        50% takes up exactly 50% of 135 pixels.</p>
+    <div class="parent">
+        <div class="box fifty-percent">50%</div>
+        <div class="box one-hundred-pixels">100px</div>
+    </div>
+    <p>For this example we have the first line taking up only 10% of 135 pixels, and our second line
+        taking up the entire 135 pixel area.</p>
+    <div class="parent">
+        <div class="box ten-percent">10%</div>
+        <div class="box one-hundredtf-pixels">135px</div>
+    </div>
+    <p>In this example we can see the differece between 50% and 50vw. 50% is still only 50% of the parent
+        while 50vw is 50% of the entire viewing area.
+    <div class="parent">
+        <div class="box fifty-percent">50%</div>
+        <div class="box fifty-vw">50vw</div>
+    </div>
+    <div class="box ten-vh">This is 10 vh or 10% of the viewing height.</div>
+</div>
+<div id="side" style="position: absolute;">
+    <p> px: fixed width  <br>
+        %: percentage of the parent <br>
+        vw: one vw is 1% of the entire screen. 100 vw is the whole screen / viewing area <br>
+        vh: one vh is 1% of the viewing height
+
+    </p>
+</div>
+</body>
+</html>

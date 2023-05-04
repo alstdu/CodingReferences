@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trying Out Css Things</title>
+    <style>
+        body {
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            background-color: #a9a9a9;
+        }
+
+        .Blog-Container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: thistle;
+            border: grey solid 3px;
+            padding: 10px;
+        }
+
+        .Date, h2 {
+            color: white;
+        }
+
+        .paragraph {
+            border-left: solid plum;
+            padding: 5px;
+        }
+
+        .list-one .purple {
+            color: purple;
+        }
+
+        ul :nth-child(2) {
+            color: saddlebrown;
+        }
+
+        .list-two > .blue {
+            color: blue;
+        }
+
+        .paragraph.purple {
+            color: purple;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="Blog-Container">
+    <div class="Date">December 22nd 2021</div>
+        <h2>This is List One</h2>'
+        <p class="paragraph purple">The date and the H2 tag will be white because they are both selected.
+        Two or more items can be selected and grouped together with a ",". by the way this is purple too
+        because this line has the paragraph AND purple tag in it. we do this by adding both classes back to back.
+        </p>
+        <ul class="list-one">
+            <li class="purple">This line has a purple class INSIDE of the list one class.
+                This is done by selecting the two classes and adding a space in between.
+            </li>
+            <li>This is the second child and it gets brown</li>
+            <li>Direct child of list one</li>
+        </ul>
+    </div>
+
+     <div class="Blog-Container"</div>
+          <div class="Date">December 22nd 2021</div>
+           <h2>This is List Two</h2>
+            <p class="paragraph">List two will have different properties than list one.</p>
+                <ul class="list-two">
+                    <li>This line is NOT purple because it is not inside of list one</li>
+                    <li>It will be brown for both lists because it's selecting the UL tag.
+                        for this we use the nth child selector.
+                    </li>
+                    <li class="blue">This is the direct child of list 2 with a blue class.
+                        to select something thats a direct child of another tag we use the >
+                    </li>
+                </ul>
+        </div>
+</body>
+</html>
